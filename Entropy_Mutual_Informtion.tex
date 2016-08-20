@@ -1,0 +1,65 @@
+\documentclass[11pt]{article}
+\usepackage[top=1.0in,bottom=1.0in,right=1.0in,left=1.0in]{geometry}
+\usepackage{amsmath}
+\usepackage[english]{babel}
+\usepackage{amsthm}
+\newtheorem{defn}{Definition:}
+
+\begin{document}
+\title{Entropy and Mutual Information}
+\author{M.Tech CS\\
+ Information and Coding Theory}
+\date {Before Mid Semester}
+\maketitle
+\section{Entropy}
+\begin{defn}
+Entropy is the minimum descriptive complexity of a random variable. In other word, it is measure of the uncertainty of a random variable.
+\end{defn}
+Formally,
+
+If \textbf{ \textit{X}} be a discrete random variable over alphabet $\chi$ and probabilty mass function is
+ 
+p(x)=Pr\{ {\textit{X} = \textit{x} \}= \textit{x}} \textit{x} $\epsilon$ \textbf{\textit{$\chi$} }.
+
+The Entropy \textit{H($\chi$)} of a discrete random variable \textbf{ \textit{X}} is defined by 
+
+\begin{equation}
+H(X) = - \sum \limits_{x \epsilon \chi} p(x) log_{2} p(x)
+\end{equation}
+
+
+Entropy is expressed in bit. 
+When entropy is measured in natural base ($\ln$) it is called \textit{nats}.\\
+\textbf{Some useful properties}
+\begin{enumerate}
+	
+
+\item $H(X) \geq 0$
+\item $H_{b}(X)=(\log_{b} a H_{a} (X).$
+\item $H(X)=-E\log p(x) = E \frac{1}{\log p(X)}$ where E($\bullet$) is expection of given function.
+
+\end{enumerate}
+
+\subsection{Joint Entropy and Conditional Entropy}
+
+\begin{defn}
+The \textbf{joint entropy } $H(X,Y)$ of a pair of discrete random variables $(X,Y)$ with joint distribution $p(x,y)$ is defined as 
+\end{defn}
+
+\begin{equation}
+H(X,Y) = - \sum \limits_{x \epsilon \chi} \sum \limits_{y \epsilon \gamma} p(x,y)log_{2} p(x,y) 
+\end{equation}
+
+\begin{equation}
+H(X,Y)=-Elog_{2}p(X,Y)
+\end{equation}
+
+\begin{defn}
+if (X,Y) ~ p(x,y), then \textbf{conditional entropy} H(Y|X) is defined as
+\end{defn}
+
+\begin{equation}
+H(Y|X)=\sum \limits_{x \epsilon \chi} p(x) H(Y|X=x)
+\end{equation}
+
+\end{document}

@@ -46,20 +46,27 @@ When entropy is measured in natural base ($\ln$) it is called \textit{nats}.\\
 The \textbf{joint entropy } $H(X,Y)$ of a pair of discrete random variables $(X,Y)$ with joint distribution $p(x,y)$ is defined as 
 \end{defn}
 
-\begin{equation}
-H(X,Y) = - \sum \limits_{x \epsilon \chi} \sum \limits_{y \epsilon \gamma} p(x,y)log_{2} p(x,y) 
-\end{equation}
 
 \begin{equation}
-H(X,Y)=-Elog_{2}p(X,Y)
+\begin{aligned}
+H(X,Y) &= - \sum \limits_{x \epsilon \chi} \sum \limits_{y \epsilon \gamma} p(x,y)log_{2} p(x,y)
+\end{aligned}
+\end{equation}
+\begin{equation}
+\begin{aligned}
+H(X,Y)&=-Elog_{2}p(X,Y)
+\end{aligned}
 \end{equation}
 
 \begin{defn}
-if (X,Y) ~ p(x,y), then \textbf{conditional entropy} H(Y|X) is defined as
+if (X,Y) $\sim$ p(x,y), then \textbf{conditional entropy} $H(Y|X)$ is defined as
 \end{defn}
 
 \begin{equation}
 H(Y|X)=\sum \limits_{x \epsilon \chi} p(x) H(Y|X=x)
+\end{equation}
+\begin{equation}
+=
 \end{equation}
 
 \end{document}

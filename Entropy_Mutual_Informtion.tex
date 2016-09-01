@@ -96,7 +96,7 @@ H(X,Y)&=-\sum \limits_{x \in \chi, y \in \gamma} p(x,y)\log_{2}p(x,y)\\
 D(p(x)||q(x))=\sum \limits_{x \in \chi} p(x) \log_{2}\frac{p(x)}{q(x)}
 \end{equation}
 \begin{equation}
-D(p(x)||q(x))=E_{p(x)}\log_{2} \frac{p(X)}{q(X)}
+D(p(x)||q(x))=E_{p(x,y)}\log_{2} \frac{p(X)}{q(X)}
 \end{equation}
 
 \end{defn}
@@ -105,6 +105,20 @@ D(p(x)||q(x))=E_{p(x)}\log_{2} \frac{p(X)}{q(X)}
 When p(x) = q(x) for $ x \in \chi $\\
 $D(p(x)||q(x))=0$
 \end{verse}
+
+\subsection{Mutual Information}
+\begin{defn}
+Two random variables $X$ and $Y$ with a joint probability mass function $p(x,y)$ and marginal probability mass functions $p(x)$ and $p(y)$, then \textbf{Mutual Information} is defined as relative entropy of joint probability mass function $p(x,y)$ and product of marginal probability $p(x)$ and $p(y)$
+\begin{equation}
+I(X;Y)=\sum \limits_{x \in \chi} \sum \limits_{y \in \gamma} p(x,y)\log_{2}\frac{p(x,y)}{p(x)p(y)}
+\end{equation} 
+
+\begin{align*}
+&=D(p(x,y)||(p(x)p(y))\\
+&=E_{p(x,y)}\log_{2}\frac{p(X,Y)}{p(X)p(Y)}
+\end{align*}
+\end{defn}
+
 
 
 
